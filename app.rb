@@ -2,6 +2,7 @@ require 'sinatra'
 
 class BookmarkManager < Sinatra::Application
 	enable :sessions
+	set :session_secret, 'super_secret'
 end
 
 require_relative './server'
