@@ -1,12 +1,17 @@
-<% if current_user %>
-	<h1>Welcome, <%= current_user.email %></h1>
-<% end %>
-<h2>Current Links:</h2>
-<ul>
-	<% @links.each do |link| %>
-		<li><a href="<%=link.url%>"><%=link.title%></a></li>
+<div id="home_text">
+	<% if current_user %>
+		<h1>Welcome, <%= current_user.email %></h1>
 	<% end %>
-</ul>
+	<% if flash[:notice] %>
+		<h1><%= flash[:notice] %></h1>
+	<% end %>
+	<h2>Current Links:</h2>
+	<ul>
+		<% @links.each do |link| %>
+			<li><a href="<%=link.url%>"><%=link.title%></a></li>
+		<% end %>
+	</ul>
+</div>
 <div id="new-link">
 	<form action="/links" method="post">
 		Url: <input type="text" name="url">

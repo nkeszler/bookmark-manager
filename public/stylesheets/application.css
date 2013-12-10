@@ -1,0 +1,91 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#logo {
+	background-color: gray;
+	font-size: 30;
+	display: flex;
+	margin: auto;
+	height: 50px;
+}
+
+#logo form{
+	display: inline-block;
+	margin: auto;
+	margin-left: 950px;
+}
+
+#main_body {
+	padding-top: 20px;
+	text-align: center;
+	border-right-width: 200px;
+	border-left-width: 200px;
+	border-color: #CCCCCC;
+	border-style: solid
+}
+
+#home_text{
+	text-align: left;
+	padding-left: 50px;
+}
+
+#new-link{
+	padding-top: 50px;
+	text-align: center;
+}
+
+ul {
+	list-style: inherit;
+	width: 200px;
+	margin: auto;
+	margin-top: 20px;
+}
+li {
+	text-align: left;
+}
+

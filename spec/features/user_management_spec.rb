@@ -28,5 +28,62 @@ feature "user signs up" do
 		fill_in :password_confirmation, :with => password_confirmation
 		click_button "Sign up"
 	end
+end
+
+feature "User signs in" do 
+
+	before(:each) do 
+		User.create(email: "test@test.com",
+					password: "test",
+					password_confirmation: "test")
+	end
+
+	scenario "with correct credentials" do 
+		visit '/'
+		expect(page).to_not have_content("Welcome")
+		sign_in("test@test.com","test")
+		expect(page).to have_content("Welcome")
+	end
+
+	scenario "with incorrect credentials" do 
+		visit '/'
+		expect(page).not_to have_content("Welcome")
+		sign_in("test@test.com","wrong")
+		expect(page).not_to have_content("Welcome")
+	end
+
+	def sign_in(email,password)
+		visit '/sessions/new'
+		fill_in :email, :with => email
+		fill_in :password, :with => password
+		click_button "Sign-in-button"
+	end
+end
+
+feature "user signs out" do 
+
+	before(:each) do 
+		User.create(email: "test@test.com",
+					password: "test",
+					password_confirmation: "test")
+	end
+
+	def sign_in(email,password)
+		visit '/sessions/new'
+		fill_in :email, :with => email
+		fill_in :password, :with => password
+		click_button "Sign-in-button"
+	end
+
+	scenario "while being signed in" do 
+		visit '/'
+		sign_in('test@test.com','test')
+		click_button "Sign out"
+		expect(page).to have_content("Goodbye")
+		expect(page).not_to have_content("Welcome")
+	end
+
+
+
 
 end

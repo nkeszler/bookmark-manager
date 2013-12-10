@@ -10,5 +10,4 @@ end
 require_relative './server'
 require_relative 'routes/init'
 require_relative 'lib/init'
-require_relative 'spec/spec_helper'
 require_relative './data_mapper_setup'

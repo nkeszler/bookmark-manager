@@ -2,10 +2,27 @@
 
 	<head>
 		<title>Bookmark Manager</title>
+		<link href="/stylesheets/application.css" rel="stylesheet" type="text/css">
 	</head>
 
 	<body>
-		<%= yield %>
+		<header>
+			<div id="logo">Bookmark Manager
+				<% if current_user %>
+					<form action="/sessions" method="post">
+						<input type="hidden" name="_method" value="delete">
+						<input type="submit" value="Sign out">
+					</form>
+				<% else %>
+					<form action="/sessions/new" method="get">
+						<input type="submit" value="Sign in">
+					</form>
+				<% end %>
+			</div>
+		</header>
+		<div id="main_body">
+			<%= yield %>
+		</div>
 	</body>
 
 </html>
