@@ -1,6 +1,6 @@
 #home_text
 	- if current_user
-		%h1 Welcome, =current_user.email
+		%h1 Welcome, #{current_user.email}
 	- if flash[:notice] 
 		%h1 = flash[:notice]
 	%h2 Current Links:
@@ -14,7 +14,7 @@
 		Url:
 		%input{type: "text", name: "url"}
 		Title:
-		%input{type: "text", name: "title"}
+		%input#title{type: "text", name: "title"}
 		Tags:
 		%input{type: "text", name: "tags"}
-		%input{type: "submit", value: "Add link"}
+		%input.add-link{type: "submit", value: "Add link"}

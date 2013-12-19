@@ -1,9 +1,8 @@
 %html
 	%head
 		%title Bookmark Manager
-		%meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
-		/ %link{href: "dist/css/bootstrap.min.css", rel: "stylesheet"}
 		%link{href: "stylesheets/application.css", rel: "stylesheet"}
+		%script{src: "http://code.jquery.com/jquery-1.10.2.js"}
 	%body
 		%header
 			%nav.navbar.navbar-default
@@ -20,6 +19,5 @@
 			= yield
 			%button.btn.btn-default{type: 'button'}
 				Action
-		%script{src: "https://code.jquery.com/jquery.js"}
-		%script{src: "js/bootstrap.min.js"}
+		%script{src: "/javascript/application.js", type: "text/javascript"}
 

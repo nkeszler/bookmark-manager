@@ -2,7 +2,7 @@ class BookmarkManager < Sinatra::Application
 
 	get '/' do 
 		@links = Link.all
-		haml :home
+		haml :home, layout: !request.xhr?
 	end
 	
 end
