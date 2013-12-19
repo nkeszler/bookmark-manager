@@ -2,6 +2,7 @@ require 'data_mapper'
 require 'sinatra'
 require './lib/init'
 require './app'
+require 'Haml'
 
 helpers do 
 

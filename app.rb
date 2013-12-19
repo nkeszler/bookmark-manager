@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'rack-flash'
+require 'Haml'
 
 class BookmarkManager < Sinatra::Application
 	enable :sessions

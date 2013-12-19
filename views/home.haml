@@ -1,0 +1,20 @@
+#home_text
+	- if current_user
+		%h1 Welcome, =current_user.email
+	- if flash[:notice] 
+		%h1 = flash[:notice]
+	%h2 Current Links:
+	%ul
+		- @links.each do |link| 
+			%li 
+				%a{href: "#{link.url}"} 
+					=link.title
+#new-link
+	%form{action: "/links", method: "post"}
+		Url:
+		%input{type: "text", name: "url"}
+		Title:
+		%input{type: "text", name: "title"}
+		Tags:
+		%input{type: "text", name: "tags"}
+		%input{type: "submit", value: "Add link"}

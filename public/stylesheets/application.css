@@ -29,6 +29,10 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 ol, ul {
 	list-style: none;
@@ -47,7 +51,8 @@ table {
 }
 
 #logo {
-	background-color: gray;
+	display: inline-block;
+	background-color: black;
 	font-size: 30;
 	display: flex;
 	margin: auto;
@@ -55,17 +60,27 @@ table {
 }
 
 #logo form{
+	position: relative;
 	display: inline-block;
 	margin: auto;
-	margin-left: 950px;
+	/*margin-left: 100%;*/
+	margin-right: 2%;
+}
+
+#logo h1{
+	color: white;
+	display: inline-block;
+	margin: auto;
+	margin-left: 2%;
 }
 
 #main_body {
 	padding-top: 20px;
 	text-align: center;
-	border-right-width: 200px;
-	border-left-width: 200px;
-	border-color: #CCCCCC;
+	margin: 50px;
+	margin-left: 100px;
+	margin-right: 100px;
+	background-color: #CCCCCC;
 	border-style: solid
 }
 

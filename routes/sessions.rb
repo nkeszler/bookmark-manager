@@ -1,7 +1,7 @@
 class BookmarkManager < Sinatra::Application
 
 	get '/sessions/new' do 
-		erb :"/sessions/new"
+		haml :"/sessions/new"
 	end
 
 	post '/sessions' do 
@@ -12,7 +12,7 @@ class BookmarkManager < Sinatra::Application
 			redirect to('/')
 		else
 			flash[:errors] = ["Email or Password incorrect"]
-			erb :"/sessions/new"
+			haml :"/sessions/new"
 		end
 	end
 

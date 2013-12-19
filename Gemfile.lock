@@ -60,6 +60,8 @@ GEM
     do_sqlite3 (0.10.13)
       data_objects (= 0.10.13)
     fastercsv (1.5.5)
+    haml (4.0.4)
+      tilt
     json (1.8.1)
     json_pure (1.8.1)
     mime-types (2.0)
@@ -103,6 +105,7 @@ DEPENDENCIES
   data_mapper
   database_cleaner
   dm-sqlite-adapter
+  haml
   rack-flash3
   rspec
   shotgun

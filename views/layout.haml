@@ -1,0 +1,25 @@
+%html
+	%head
+		%title Bookmark Manager
+		%meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
+		/ %link{href: "dist/css/bootstrap.min.css", rel: "stylesheet"}
+		%link{href: "stylesheets/application.css", rel: "stylesheet"}
+	%body
+		%header
+			%nav.navbar.navbar-default
+				#logo 
+					%h1 Bookmark Manager
+					- if current_user
+						%form.navbar-right{action: "/sessions", method: "post"}
+							%input{type: "hidden", name: "_method", value: "delete"}
+							%input{type: "submit", value: "Sign out"}
+					- else
+						%form.navbar-right{action: "/sessions/new", method: "get"}
+							%input{type: "submit", value: "Sign in"}
+		#main_body
+			= yield
+			%button.btn.btn-default{type: 'button'}
+				Action
+		%script{src: "https://code.jquery.com/jquery.js"}
+		%script{src: "js/bootstrap.min.js"}
+
